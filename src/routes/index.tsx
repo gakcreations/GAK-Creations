@@ -189,10 +189,10 @@ function Collection() {
       medium: "Ink · Saintes, France",
     },
     {
-      img: print2,
+      img: print2Asset.url,
       no: "N° 03",
-      title: "Canary Field Notes",
-      medium: "Mixed media collage",
+      title: "Basilica de San Juan de Baños",
+      medium: "Collage · Spain",
     },
     {
       img: print3,
