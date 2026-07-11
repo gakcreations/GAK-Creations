@@ -182,10 +182,10 @@ function Editorial() {
 
 function Collection() {
   const works = [
-    {
-      img: print1,
+  {
+      img: print1Asset.url,
       no: "N° 02",
-      title: "Arched Passage",
+      title: "Roman Arch of Germanicus",
       medium: "Ink · Saintes, France",
     },
     {
