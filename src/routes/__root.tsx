@@ -77,17 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "GAK Creations — Contemporary Art Prints" },
+      { title: "GAK Creations — Gerald Allen Knowles · Architectural Art & Travel Collages" },
       {
         name: "description",
         content:
-          "GAK Creations is a contemporary studio of original art prints. Browse the collection and shop directly from the print-on-demand storefront.",
+          "The ongoing archive of Gerald Allen Knowles — architect, artist, and traveler. Drawings and collages from Europe and the Atlantic islands, available as fine art prints.",
       },
-      { property: "og:title", content: "GAK Creations — Contemporary Art Prints" },
+      { property: "og:title", content: "GAK Creations — Gerald Allen Knowles" },
       {
         property: "og:description",
         content:
-          "A contemporary studio of original art prints by GAK. Shop the collection.",
+          "Architectural drawings and travel collages by Gerald Allen Knowles. Shop the print collection.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
