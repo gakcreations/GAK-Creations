@@ -201,6 +201,12 @@ function Collection() {
       title: "Volcanic Landscape of Fuerteventura",
       medium: "Ink & wash · Canary Islands",
     },
+    {
+      img: print4Asset.url,
+      no: "N° 05",
+      title: "The Blue Boat That Dreams of Sea",
+      medium: "Ink & wash · Mediterranean",
+    },
   ];
 
   return (
@@ -223,69 +229,38 @@ function Collection() {
           </a>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-8">
-          {/* Feature */}
-          <a
-            href={SHOP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group md:col-span-7"
-          >
-            <div className="overflow-hidden bg-paper-warm">
-              <img
-                src={works[0].img}
-                alt={works[0].title}
-                width={900}
-                height={1100}
-                loading="lazy"
-                className="w-full object-cover transition duration-700 group-hover:scale-[1.02]"
-              />
-            </div>
-            <div className="mt-5 flex items-baseline justify-between border-b border-ink/20 pb-4">
-              <div>
-                <p className="eyebrow">{works[0].no}</p>
-                <h3 className="mt-2 font-display text-3xl md:text-4xl">
-                  {works[0].title}
-                </h3>
+        <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-8">
+          {works.map((w) => (
+            <a
+              key={w.no}
+              href={SHOP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="overflow-hidden bg-paper-warm">
+                <img
+                  src={w.img}
+                  alt={w.title}
+                  width={900}
+                  height={1100}
+                  loading="lazy"
+                  className="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.02]"
+                />
               </div>
-              <span className="text-xs uppercase tracking-[0.2em] text-ink-soft">
-                {works[0].medium}
-              </span>
-            </div>
-          </a>
-
-          {/* Two stacked */}
-          <div className="grid grid-cols-1 gap-10 md:col-span-5">
-            {works.slice(1).map((w) => (
-              <a
-                key={w.no}
-                href={SHOP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                <div className="overflow-hidden bg-paper-warm">
-                  <img
-                    src={w.img}
-                    alt={w.title}
-                    width={900}
-                    height={1100}
-                    loading="lazy"
-                    className="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.02]"
-                  />
+              <div className="mt-5 flex items-baseline justify-between border-b border-ink/20 pb-4">
+                <div>
+                  <p className="eyebrow">{w.no}</p>
+                  <h3 className="mt-2 font-display text-2xl md:text-3xl">
+                    {w.title}
+                  </h3>
                 </div>
-                <div className="mt-4 flex items-baseline justify-between border-b border-ink/20 pb-3">
-                  <div>
-                    <p className="eyebrow">{w.no}</p>
-                    <h3 className="mt-2 font-display text-2xl">{w.title}</h3>
-                  </div>
-                  <span className="text-[0.65rem] uppercase tracking-[0.2em] text-ink-soft">
-                    {w.medium}
-                  </span>
-                </div>
-              </a>
-            ))}
-          </div>
+                <span className="text-xs uppercase tracking-[0.2em] text-ink-soft">
+                  {w.medium}
+                </span>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>
