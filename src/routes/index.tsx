@@ -3,6 +3,7 @@ import heroArtwork from "@/assets/abbaye-aux-dames-saintes.jpg.asset.json";
 import print1Asset from "@/assets/roman-arch-of-germanicus-saintes-france.jpg.asset.json";
 import print2Asset from "@/assets/basilica-de-san-juan-de-banos-spain.png.asset.json";
 import print3Asset from "@/assets/volcanic-landscape-fuerteventura-canary-islands.jpg.asset.json";
+import print4Asset from "@/assets/the-blue-boat-that-dreams-of-sea.jpg.asset.json";
 import studio from "@/assets/studio.jpg";
 
 export const Route = createFileRoute("/")({
