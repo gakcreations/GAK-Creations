@@ -182,7 +182,7 @@ function Editorial() {
 
 function Collection() {
   const works = [
-  {
+    {
       img: print1Asset.url,
       no: "N° 02",
       title: "Roman Arch of Germanicus",
