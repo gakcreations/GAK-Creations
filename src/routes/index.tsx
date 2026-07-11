@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroArtwork from "@/assets/abbaye-aux-dames-saintes.jpg.asset.json";
-import print1 from "@/assets/print-1.jpg";
+import print1Asset from "@/assets/roman-arch-of-germanicus-saintes-france.jpg.asset.json";
 import print2 from "@/assets/print-2.jpg";
 import print3 from "@/assets/print-3.jpg";
 import studio from "@/assets/studio.jpg";
