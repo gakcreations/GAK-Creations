@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroArtwork from "@/assets/abbaye-aux-dames-saintes.jpg.asset.json";
 import print1Asset from "@/assets/roman-arch-of-germanicus-saintes-france.jpg.asset.json";
-import print2 from "@/assets/print-2.jpg";
+import print2Asset from "@/assets/basilica-de-san-juan-de-banos-spain.png.asset.json";
 import print3 from "@/assets/print-3.jpg";
 import studio from "@/assets/studio.jpg";
 
@@ -189,10 +189,10 @@ function Collection() {
       medium: "Ink · Saintes, France",
     },
     {
-      img: print2,
+      img: print2Asset.url,
       no: "N° 03",
-      title: "Canary Field Notes",
-      medium: "Mixed media collage",
+      title: "Basilica de San Juan de Baños",
+      medium: "Collage · Spain",
     },
     {
       img: print3,
