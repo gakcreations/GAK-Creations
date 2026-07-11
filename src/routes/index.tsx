@@ -309,15 +309,15 @@ function StudioNote() {
           </figcaption>
         </figure>
         <div className="md:col-span-6 md:pl-8">
-          <p className="eyebrow">A Note from the Studio</p>
+          <p className="eyebrow">In His Own Words</p>
           <blockquote className="mt-8 font-display text-3xl leading-tight md:text-5xl">
             <span className="text-ink/30">“</span>
-            I make prints for the quiet hours — the ones with coffee, open
-            windows, and no particular plan.
+            Every place has a geometry. I've spent a lifetime walking slowly
+            enough to see it — then bringing it home on paper.
             <span className="text-ink/30">”</span>
           </blockquote>
           <p className="mt-8 text-sm uppercase tracking-[0.25em] text-ink-soft">
-            — GAK, Founder & Artist
+            — Gerald Allen Knowles
           </p>
           <div className="rule-line mt-10 w-24" />
         </div>
@@ -332,13 +332,14 @@ function Shop() {
       <div className="mx-auto max-w-[1400px] px-6 py-24 text-center md:px-12 md:py-32">
         <p className="eyebrow">The Storefront</p>
         <h2 className="mx-auto mt-8 max-w-4xl font-display text-5xl leading-[1] md:text-8xl">
-          Take a <em className="font-light">piece</em> of the studio
+          Bring a <em className="font-light">place</em>
           <br />
-          <span className="italic font-light">home.</span>
+          <span className="italic font-light">home with you.</span>
         </h2>
         <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-ink-soft">
-          The complete collection is published on our print-on-demand
-          storefront. Every order is made-to-order and shipped worldwide.
+          The full archive of drawings and collages is published as fine art
+          prints on our print-on-demand storefront. Made to order. Shipped
+          worldwide.
         </p>
         <a
           href={SHOP_URL}
@@ -366,8 +367,8 @@ function Footer() {
             GAK <em className="font-light">Creations</em>
           </p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-paper/60">
-            Contemporary art prints, made in the studio and shipped from a
-            partner print house.
+            The ongoing archive of Gerald Allen Knowles — architecture, art,
+            and lived experience, printed on paper.
           </p>
         </div>
         <div className="md:col-span-3">
