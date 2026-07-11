@@ -62,17 +62,18 @@ function Hero() {
     <section className="border-b border-ink/15">
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 py-14 md:grid-cols-12 md:gap-8 md:px-12 md:py-24">
         <div className="md:col-span-5 md:pt-6">
-          <p className="eyebrow">Volume 01 · Contemporary Prints</p>
+          <p className="eyebrow">The Archive · Gerald Allen Knowles</p>
           <h1 className="mt-8 font-display text-[3.5rem] leading-[0.95] tracking-tight md:text-[6rem]">
-            Ink, <em className="font-light">paper,</em>
+            The quiet
             <br />
-            <span className="italic font-light">and</span> quiet
+            <em className="font-light">geometry</em>
             <br />
-            gestures.
+            <span className="italic font-light">of</span> places.
           </h1>
           <p className="mt-8 max-w-md text-base leading-relaxed text-ink-soft md:text-lg">
-            A contemporary studio of original works on paper. Each print is an
-            edition — considered, unhurried, made to live on your walls.
+            Architectural drawings and travel collages from a lifetime of
+            wandering — Europe, the Atlantic islands, and the small structures
+            in between. Now available as fine art prints.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-6">
             <a
@@ -98,14 +99,14 @@ function Hero() {
           <figure className="relative">
             <img
               src={heroArtwork}
-              alt="Featured contemporary ink and wash artwork by GAK"
+              alt="Ink sketch of a stone staircase in Saintes by Gerald Allen Knowles"
               width={1400}
               height={1600}
               className="w-full object-cover"
             />
             <figcaption className="mt-4 flex items-start justify-between gap-6 text-xs uppercase tracking-[0.2em] text-ink-soft">
-              <span>Fig. 001 — Untitled, ink on paper</span>
-              <span>2026</span>
+              <span>Fig. 001 — Staircase, Saintes · ink on paper</span>
+              <span>Sketchbook</span>
             </figcaption>
           </figure>
         </div>
