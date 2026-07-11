@@ -62,17 +62,18 @@ function Hero() {
     <section className="border-b border-ink/15">
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 py-14 md:grid-cols-12 md:gap-8 md:px-12 md:py-24">
         <div className="md:col-span-5 md:pt-6">
-          <p className="eyebrow">Volume 01 · Contemporary Prints</p>
+          <p className="eyebrow">The Archive · Gerald Allen Knowles</p>
           <h1 className="mt-8 font-display text-[3.5rem] leading-[0.95] tracking-tight md:text-[6rem]">
-            Ink, <em className="font-light">paper,</em>
+            The quiet
             <br />
-            <span className="italic font-light">and</span> quiet
+            <em className="font-light">geometry</em>
             <br />
-            gestures.
+            <span className="italic font-light">of</span> places.
           </h1>
           <p className="mt-8 max-w-md text-base leading-relaxed text-ink-soft md:text-lg">
-            A contemporary studio of original works on paper. Each print is an
-            edition — considered, unhurried, made to live on your walls.
+            Architectural drawings and travel collages from a lifetime of
+            wandering — Europe, the Atlantic islands, and the small structures
+            in between. Now available as fine art prints.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-6">
             <a
@@ -98,14 +99,14 @@ function Hero() {
           <figure className="relative">
             <img
               src={heroArtwork}
-              alt="Featured contemporary ink and wash artwork by GAK"
+              alt="Ink sketch of a stone staircase in Saintes by Gerald Allen Knowles"
               width={1400}
               height={1600}
               className="w-full object-cover"
             />
             <figcaption className="mt-4 flex items-start justify-between gap-6 text-xs uppercase tracking-[0.2em] text-ink-soft">
-              <span>Fig. 001 — Untitled, ink on paper</span>
-              <span>2026</span>
+              <span>Fig. 001 — Staircase, Saintes · ink on paper</span>
+              <span>Sketchbook</span>
             </figcaption>
           </figure>
         </div>
@@ -116,11 +117,11 @@ function Hero() {
 
 function Marquee() {
   const items = [
-    "Original Works",
-    "Limited Editions",
-    "Museum-Grade Paper",
-    "Worldwide Shipping",
-    "New Volume",
+    "Architectural Drawings",
+    "Travel Collages",
+    "Sketchbook Editions",
+    "Europe & the Atlantic",
+    "Fine Art Prints",
   ];
   return (
     <div className="overflow-hidden border-b border-ink/15 bg-paper-warm">
@@ -144,25 +145,33 @@ function Editorial() {
     <section className="border-b border-ink/15">
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 py-20 md:grid-cols-12 md:px-12 md:py-28">
         <div className="md:col-span-4">
-          <p className="eyebrow">The Notebook</p>
+          <p className="eyebrow">About the Artist</p>
           <div className="rule-line mt-6 w-16" />
+          <p className="mt-6 text-sm uppercase tracking-[0.2em] text-ink-soft">
+            Gerald Allen Knowles
+            <br />
+            Architect · Artist · Traveler
+          </p>
         </div>
         <div className="md:col-span-8">
           <h2 className="font-display text-4xl leading-[1.05] md:text-6xl">
-            Art that <em className="font-light">arrives quietly</em> and stays
-            for a long time.
+            The discipline of an architect. The eye of a{" "}
+            <em className="font-light">traveler.</em>
           </h2>
           <div className="mt-10 grid gap-8 text-base leading-relaxed text-ink-soft md:grid-cols-2 md:text-[1.05rem]">
             <p>
-              GAK Creations is a small contemporary studio publishing original
-              works on paper. Every piece begins in the studio with ink,
-              pigment, and time — then travels to you as an archival print,
-              made on demand by a partner press.
+              Gerald Allen Knowles is an architect, artist, and traveler whose
+              work traces the quiet geometry of places across Europe and the
+              islands of the Atlantic. His drawings carry the discipline of
+              architectural observation — clean lines, measured shadows, and a
+              sensitivity to structure.
             </p>
             <p>
-              The store lives on Printify, so orders ship globally with the
-              craft standards of a proper print house. This site is the front
-              door — a place to sit with the work before you take it home.
+              From staircases in Saintes to volcanic landscapes in the Canary
+              Islands, his sketchbooks read like field journals: immediate,
+              intimate, shaped by decades of wandering with pen and paper in
+              hand. His collages expand these impressions into compositions
+              that feel both analytical and poetic.
             </p>
           </div>
         </div>
@@ -176,20 +185,20 @@ function Collection() {
     {
       img: print1,
       no: "N° 02",
-      title: "Botanica",
-      medium: "Ink · Framed print",
+      title: "Arched Passage",
+      medium: "Ink · Saintes, France",
     },
     {
       img: print2,
       no: "N° 03",
-      title: "Interference",
-      medium: "Mixed media · Giclée",
+      title: "Canary Field Notes",
+      medium: "Mixed media collage",
     },
     {
       img: print3,
       no: "N° 04",
-      title: "Figure, in one line",
-      medium: "Ink on paper",
+      title: "Volcanic Ridge",
+      medium: "Ink & wash · Canary Islands",
     },
   ];
 
@@ -300,15 +309,15 @@ function StudioNote() {
           </figcaption>
         </figure>
         <div className="md:col-span-6 md:pl-8">
-          <p className="eyebrow">A Note from the Studio</p>
+          <p className="eyebrow">In His Own Words</p>
           <blockquote className="mt-8 font-display text-3xl leading-tight md:text-5xl">
             <span className="text-ink/30">“</span>
-            I make prints for the quiet hours — the ones with coffee, open
-            windows, and no particular plan.
+            Every place has a geometry. I've spent a lifetime walking slowly
+            enough to see it — then bringing it home on paper.
             <span className="text-ink/30">”</span>
           </blockquote>
           <p className="mt-8 text-sm uppercase tracking-[0.25em] text-ink-soft">
-            — GAK, Founder & Artist
+            — Gerald Allen Knowles
           </p>
           <div className="rule-line mt-10 w-24" />
         </div>
@@ -323,13 +332,14 @@ function Shop() {
       <div className="mx-auto max-w-[1400px] px-6 py-24 text-center md:px-12 md:py-32">
         <p className="eyebrow">The Storefront</p>
         <h2 className="mx-auto mt-8 max-w-4xl font-display text-5xl leading-[1] md:text-8xl">
-          Take a <em className="font-light">piece</em> of the studio
+          Bring a <em className="font-light">place</em>
           <br />
-          <span className="italic font-light">home.</span>
+          <span className="italic font-light">home with you.</span>
         </h2>
         <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-ink-soft">
-          The complete collection is published on our print-on-demand
-          storefront. Every order is made-to-order and shipped worldwide.
+          The full archive of drawings and collages is published as fine art
+          prints on our print-on-demand storefront. Made to order. Shipped
+          worldwide.
         </p>
         <a
           href={SHOP_URL}
@@ -357,8 +367,8 @@ function Footer() {
             GAK <em className="font-light">Creations</em>
           </p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-paper/60">
-            Contemporary art prints, made in the studio and shipped from a
-            partner print house.
+            The ongoing archive of Gerald Allen Knowles — architecture, art,
+            and lived experience, printed on paper.
           </p>
         </div>
         <div className="md:col-span-3">
