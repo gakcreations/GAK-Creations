@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroArtwork from "@/assets/hero-artwork.jpg";
+import heroArtwork from "@/assets/abbaye-aux-dames-saintes.jpg.asset.json";
 import print1 from "@/assets/print-1.jpg";
 import print2 from "@/assets/print-2.jpg";
 import print3 from "@/assets/print-3.jpg";
@@ -98,14 +98,14 @@ function Hero() {
           <div className="absolute -left-4 top-0 hidden h-full w-px bg-ink/20 md:block" />
           <figure className="relative">
             <img
-              src={heroArtwork}
-              alt="Ink sketch of a stone staircase in Saintes by Gerald Allen Knowles"
+              src={heroArtwork.url}
+              alt="Architectural study of Abbaye Aux Dames, Saintes, France, by Gerald Allen Knowles"
               width={1400}
               height={1600}
               className="w-full object-cover"
             />
             <figcaption className="mt-4 flex items-start justify-between gap-6 text-xs uppercase tracking-[0.2em] text-ink-soft">
-              <span>Fig. 001 — Staircase, Saintes · ink on paper</span>
+              <span>Fig. 001 — Abbaye Aux Dames, Saintes · ink and wash on paper</span>
               <span>Sketchbook</span>
             </figcaption>
           </figure>
