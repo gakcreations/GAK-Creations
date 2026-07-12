@@ -186,8 +186,8 @@ function Collection() {
     {
       img: casaBatlloAsset.url,
       no: "N° 02",
-      title: "Casa Batlló",
-      medium: "Collage · Barcelona",
+      title: "Guggenheim Museum Bilbao, Spain",
+      medium: "Collage · Bilbao",
     },
     {
       img: print2Asset.url,
