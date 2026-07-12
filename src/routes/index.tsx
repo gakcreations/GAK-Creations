@@ -5,6 +5,7 @@ import print2Asset from "@/assets/church-of-san-juan-bautista-de-banos-spain.jpg
 import print3Asset from "@/assets/volcanic-landscape-fuerteventura-canary-islands.jpg.asset.json";
 import print4Asset from "@/assets/the-blue-boat-that-dreams-of-sea.jpg.asset.json";
 import studio from "@/assets/studio.jpg";
+import logo from "@/assets/gak-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -34,8 +35,11 @@ function Header() {
         <a href="/" className="eyebrow">
           Est. Studio
         </a>
-        <a href="/" className="font-display text-xl tracking-wide md:text-2xl">
-          GAK <span className="italic font-light">Creations</span>
+        <a href="/" className="flex items-center gap-3">
+          <img src={logo.url} alt="GAK Creations" className="h-9 w-auto md:h-10" />
+          <span className="font-display text-xl tracking-wide md:text-2xl">
+            GAK <span className="italic font-light">Creations</span>
+          </span>
         </a>
         <a
           href={SHOP_URL}
