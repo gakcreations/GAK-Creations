@@ -5,6 +5,7 @@ import print2Asset from "@/assets/church-of-san-juan-bautista-de-banos-spain.jpg
 import print3Asset from "@/assets/volcanic-landscape-fuerteventura-canary-islands.jpg.asset.json";
 import print4Asset from "@/assets/the-blue-boat-that-dreams-of-sea.jpg.asset.json";
 import studio from "@/assets/studio.jpg";
+import logo from "@/assets/gak-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -34,8 +35,11 @@ function Header() {
         <a href="/" className="eyebrow">
           Est. Studio
         </a>
-        <a href="/" className="font-display text-xl tracking-wide md:text-2xl">
-          GAK <span className="italic font-light">Creations</span>
+        <a href="/" className="flex items-center gap-3">
+          <img src={logo.url} alt="GAK Creations" className="h-9 w-auto md:h-10" />
+          <span className="font-display text-xl tracking-wide md:text-2xl">
+            GAK <span className="italic font-light">Creations</span>
+          </span>
         </a>
         <a
           href={SHOP_URL}
@@ -338,13 +342,21 @@ function Footer() {
   return (
     <footer className="bg-ink text-paper">
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 py-16 md:grid-cols-12 md:px-12">
-        <div className="md:col-span-6">
-          <p className="font-display text-4xl md:text-5xl">
-            GAK <em className="font-light">Creations</em>
-          </p>
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-paper/60">
+        <div className="md:col-span-5">
+          <div className="flex items-center gap-4">
+            <img src={logo.url} alt="GAK Creations" className="h-12 w-auto invert" />
+            <p className="font-display text-4xl md:text-5xl">
+              GAK <em className="font-light">Creations</em>
+            </p>
+          </div>
+          <p className="mt-6 max-w-sm text-sm leading-relaxed text-paper/60">
             The ongoing archive of Gerald Allen Knowles — architecture, art,
             and lived experience, printed on paper.
+          </p>
+          <p className="mt-6 text-sm text-paper/70">
+            <a href="mailto:info@gakcreations.com" className="hover:text-paper">
+              info@gakcreations.com
+            </a>
           </p>
         </div>
         <div className="md:col-span-3">
@@ -372,15 +384,35 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className="md:col-span-3">
+        <div className="md:col-span-4">
           <p className="text-[0.65rem] uppercase tracking-[0.28em] text-paper/50">
-            Studio
+            Customer Care & Legal
           </p>
-          <ul className="mt-5 space-y-3 text-sm text-paper/80">
-            <li>Original works on paper</li>
-            <li>Limited editions</li>
-            <li>Worldwide shipping</li>
+          <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
+            <li>
+              <a href="/shipping-policy" className="hover:text-paper/70">
+                Shipping Policy
+              </a>
+            </li>
+            <li>
+              <a href="/refund-policy" className="hover:text-paper/70">
+                Refund & Returns
+              </a>
+            </li>
+            <li>
+              <a href="/terms" className="hover:text-paper/70">
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a href="/privacy-policy" className="hover:text-paper/70">
+                Privacy Policy
+              </a>
+            </li>
           </ul>
+          <p className="mt-6 text-xs leading-relaxed text-paper/50">
+            Made to order. Fulfilled worldwide through Printify.
+          </p>
         </div>
       </div>
       <div className="border-t border-paper/15">
