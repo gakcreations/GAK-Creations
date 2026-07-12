@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroArtwork from "@/assets/abbaye-aux-dames-saintes.jpg.asset.json";
 import casaBatlloAsset from "@/assets/casa-batllo-gaudi-barcelona.jpg.asset.json";
-import print2AssetAsset from "@/assets/church-of-san-juan-bautista-de-banos-spain.jpg.asset.json";
+import print2Asset from "@/assets/church-of-san-juan-bautista-de-banos-spain.jpg.asset.json";
 import print3Asset from "@/assets/volcanic-landscape-fuerteventura-canary-islands.jpg.asset.json";
 import print4Asset from "@/assets/the-blue-boat-that-dreams-of-sea.jpg.asset.json";
 import studio from "@/assets/studio.jpg";
@@ -192,7 +192,7 @@ function Collection() {
     {
       img: print2Asset.url,
       no: "N° 03",
-      title: "Basilica de San Juan de Baños",
+      title: "Church of San Juan Bautista de Baños Spain",
       medium: "Collage · Spain",
     },
     {
