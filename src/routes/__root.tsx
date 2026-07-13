@@ -77,19 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "GAK Creations — Gerald Allen Knowles · Architectural Art & Travel Collages" },
+      { title: "GAK Creations — Architectural Art & Travel Collages" },
       {
         name: "description",
         content:
-          "The ongoing archive of Gerald Allen Knowles — architect, artist, and traveler. Drawings and collages from Europe and the Atlantic islands, available as fine art prints.",
-      },
-      { property: "og:title", content: "GAK Creations — Gerald Allen Knowles" },
-      {
-        property: "og:description",
-        content:
-          "Architectural drawings and travel collages by Gerald Allen Knowles. Shop the print collection.",
+          "The archive of Gerald Allen Knowles — architectural drawings and travel collages from Europe and the Atlantic islands, available as fine art prints.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "GAK Creations" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
