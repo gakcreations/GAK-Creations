@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PolicyPage, PolicyH2 } from "@/components/PolicyPage";
 
+const URL = "https://gak-creations-doorway.lovable.app/shipping-policy";
+
 export const Route = createFileRoute("/shipping-policy")({
   component: ShippingPolicy,
   head: () => ({
@@ -11,7 +13,16 @@ export const Route = createFileRoute("/shipping-policy")({
         content:
           "Production times, shipping regions, delivery estimates, and carriers for GAK Creations fine art prints fulfilled by Printify.",
       },
+      { property: "og:title", content: "Shipping Policy — GAK Creations" },
+      {
+        property: "og:description",
+        content:
+          "Production times, delivery estimates, and shipping regions for fine art prints from GAK Creations.",
+      },
+      { property: "og:url", content: URL },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: URL }],
   }),
 });
 

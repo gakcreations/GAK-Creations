@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PolicyPage, PolicyH2 } from "@/components/PolicyPage";
 
+const URL = "https://gak-creations-doorway.lovable.app/refund-policy";
+
 export const Route = createFileRoute("/refund-policy")({
   component: RefundPolicy,
   head: () => ({
@@ -11,7 +13,16 @@ export const Route = createFileRoute("/refund-policy")({
         content:
           "Returns, refunds, and replacements for GAK Creations fine art prints made to order through Printify.",
       },
+      { property: "og:title", content: "Refund & Returns Policy — GAK Creations" },
+      {
+        property: "og:description",
+        content:
+          "How refunds, returns, and replacements work for made-to-order GAK Creations prints.",
+      },
+      { property: "og:url", content: URL },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: URL }],
   }),
 });
 

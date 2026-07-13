@@ -163,6 +163,7 @@ function Hero() {
               alt="Architectural study of Abbaye Aux Dames, Saintes, France, by Gerald Allen Knowles"
               width={1400}
               height={1600}
+              fetchPriority="high"
               className="w-full object-cover"
             />
             <figcaption className="mt-4 flex items-start justify-between gap-6 text-xs uppercase tracking-[0.2em] text-ink-soft">

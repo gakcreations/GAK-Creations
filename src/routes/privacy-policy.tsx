@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PolicyPage, PolicyH2 } from "@/components/PolicyPage";
 
+const URL = "https://gak-creations-doorway.lovable.app/privacy-policy";
+
 export const Route = createFileRoute("/privacy-policy")({
   component: PrivacyPolicy,
   head: () => ({
@@ -11,7 +13,16 @@ export const Route = createFileRoute("/privacy-policy")({
         content:
           "How GAK Creations collects, uses, and protects personal information when you visit the site or place an order.",
       },
+      { property: "og:title", content: "Privacy Policy — GAK Creations" },
+      {
+        property: "og:description",
+        content:
+          "How GAK Creations handles personal data, cookies, and your privacy rights.",
+      },
+      { property: "og:url", content: URL },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: URL }],
   }),
 });
 
