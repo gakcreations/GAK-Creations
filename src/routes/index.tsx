@@ -7,8 +7,64 @@ import print4Asset from "@/assets/the-blue-boat-that-dreams-of-sea.jpg.asset.jso
 import studio from "@/assets/studio.jpg";
 import logo from "@/assets/gak-logo.png.asset.json";
 
+const SITE_URL = "https://gak-creations-doorway.lovable.app";
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "GAK Creations — Architectural Art & Travel Collages" },
+      {
+        name: "description",
+        content:
+          "The archive of Gerald Allen Knowles — architectural drawings and travel collages from Europe and the Atlantic islands, available as fine art prints.",
+      },
+      { property: "og:title", content: "GAK Creations — Architectural Art & Travel Collages" },
+      {
+        property: "og:description",
+        content:
+          "Architectural drawings and travel collages by Gerald Allen Knowles. Shop the fine art print collection.",
+      },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:type", content: "website" },
+    ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": `${SITE_URL}/#website`,
+              url: `${SITE_URL}/`,
+              name: "GAK Creations",
+              description:
+                "Archive of architectural drawings and travel collages by Gerald Allen Knowles, available as fine art prints.",
+              publisher: { "@id": `${SITE_URL}/#organization` },
+            },
+            {
+              "@type": "Organization",
+              "@id": `${SITE_URL}/#organization`,
+              name: "GAK Creations",
+              url: `${SITE_URL}/`,
+              email: "info@gakcreations.com",
+              logo: {
+                "@type": "ImageObject",
+                url: `${SITE_URL}${logo.url}`,
+              },
+              founder: {
+                "@type": "Person",
+                name: "Gerald Allen Knowles",
+                jobTitle: "Architect, Artist, and Traveler",
+              },
+            },
+          ],
+        }),
+      },
+    ],
+  }),
 });
 
 const SHOP_URL = "https://gak-creations.printify.me";
@@ -107,6 +163,7 @@ function Hero() {
               alt="Architectural study of Abbaye Aux Dames, Saintes, France, by Gerald Allen Knowles"
               width={1400}
               height={1600}
+              fetchPriority="high"
               className="w-full object-cover"
             />
             <figcaption className="mt-4 flex items-start justify-between gap-6 text-xs uppercase tracking-[0.2em] text-ink-soft">

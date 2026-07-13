@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PolicyPage, PolicyH2 } from "@/components/PolicyPage";
 
+const URL = "https://gak-creations-doorway.lovable.app/terms";
+
 export const Route = createFileRoute("/terms")({
   component: Terms,
   head: () => ({
@@ -11,7 +13,16 @@ export const Route = createFileRoute("/terms")({
         content:
           "The terms and conditions that govern your use of the GAK Creations website and the purchase of fine art prints.",
       },
+      { property: "og:title", content: "Terms of Service — GAK Creations" },
+      {
+        property: "og:description",
+        content:
+          "Terms and conditions for using the GAK Creations website and ordering fine art prints.",
+      },
+      { property: "og:url", content: URL },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: URL }],
   }),
 });
 
