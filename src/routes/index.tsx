@@ -7,7 +7,7 @@ import print4Asset from "@/assets/the-blue-boat-that-dreams-of-sea.jpg.asset.jso
 import studio from "@/assets/studio.jpg";
 import logo from "@/assets/gak-logo.png.asset.json";
 
-const SITE_URL = "https://gak-creations-doorway.lovable.app";
+const SITE_URL = "https://www.gakcreations.com";
 
 export const Route = createFileRoute("/")({
   component: Index,
