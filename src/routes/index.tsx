@@ -1,12 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import studio from "@/assets/studio.jpg";
 
-const heroArtworkUrl = "/images/abbaye-aux-dames-saintes.jpg";
-const casaBatlloUrl = "/images/casa-batllo-gaudi-barcelona.jpg";
-const print2Url = "/images/church-of-san-juan-bautista-de-banos-spain.jpg";
-const print3Url = "/images/volcanic-landscape-fuerteventura-canary-islands.jpg";
-const print4Url = "/images/the-blue-boat-that-dreams-of-sea.jpg";
-const logoUrl = "/images/gak-logo.png";
+// FIXED IMAGE PATHS — GitHub Pages requires relative paths
+const heroArtworkUrl = "./images/abbaye-aux-dames-saintes.jpg";
+const casaBatlloUrl = "./images/casa-batllo-gaudi-barcelona.jpg";
+const print2Url = "./images/church-of-san-juan-bautista-de-banos-spain.jpg";
+const print3Url = "./images/volcanic-landscape-fuerteventura-canary-islands.jpg";
+const print4Url = "./images/the-blue-boat-that-dreams-of-sea.jpg";
+const logoUrl = "./images/gak-logo.png";
 
 const SITE_URL = "https://www.gakcreations.com";
 
@@ -414,49 +415,4 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="https://www.gakcreations.com" className="hover:text-paper/70">
-                gakcreations.com
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="md:col-span-4">
-          <p className="text-[0.65rem] uppercase tracking-[0.28em] text-paper/50">
-            Customer Care & Legal
-          </p>
-          <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
-            <li>
-              <a href="/shipping-policy" className="hover:text-paper/70">
-                Shipping Policy
-              </a>
-            </li>
-            <li>
-              <a href="/refund-policy" className="hover:text-paper/70">
-                Refund & Returns
-              </a>
-            </li>
-            <li>
-              <a href="/terms" className="hover:text-paper/70">
-                Terms of Service
-              </a>
-            </li>
-            <li>
-              <a href="/privacy-policy" className="hover:text-paper/70">
-                Privacy Policy
-              </a>
-            </li>
-          </ul>
-          <p className="mt-6 text-xs leading-relaxed text-paper/50">
-            Made to order. Fulfilled worldwide through Printify.
-          </p>
-        </div>
-      </div>
-      <div className="border-t border-paper/15">
-        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-4 px-6 py-6 text-[0.7rem] uppercase tracking-[0.25em] text-paper/50 md:px-12">
-          <span>© {new Date().getFullYear()} GAK Creations</span>
-          <span>Made with care — in the studio</span>
-        </div>
-      </div>
-    </footer>
-  );
-}
+              <a href
