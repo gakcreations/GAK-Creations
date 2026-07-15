@@ -32,6 +32,36 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Download images from CDN
+        run: |
+          mkdir -p public/images
+          declare -A images=(
+            ["abbaye-aux-dames-saintes.jpg"]="c44e198c-299f-410b-80c4-f25088fa37f0"
+            ["casa-batllo-gaudi-barcelona.jpg"]="65839d88-59fa-466f-8c6c-107901a59909"
+            ["church-of-san-juan-bautista-de-banos-spain.jpg"]="03f5bb52-0789-4020-8388-b8f0a1902704"
+            ["volcanic-landscape-fuerteventura-canary-islands.jpg"]="49161fdf-966f-4039-a45e-73b3ca425f90"
+            ["the-blue-boat-that-dreams-of-sea.jpg"]="f8ab5b68-5b06-44ae-ac9a-c0d188716d5f"
+            ["gak-logo.png"]="77821289-bcf5-4026-9db9-d0c779d6717b"
+          )
+          BASE="https://gak-creations-doorway.lovable.app/__l5e/assets-v1"
+          failed=0
+          for filename in "${!images[@]}"; do
+            asset_id="${images[$filename]}"
+            url="$BASE/$asset_id/$filename"
+            echo "Downloading $filename"
+            if curl -fsSL -o "public/images/$filename" "$url" \
+              || curl -fsSL -o "public/images/$filename" "https://www.gakcreations.com/__l5e/assets-v1/$asset_id/$filename"; then
+              echo "  OK: $(wc -c < "public/images/$filename") bytes"
+            else
+              echo "ERROR: Failed to download $filename"
+              failed=1
+            fi
+          done
+          if [ $failed -ne 0 ]; then
+            echo "One or more images could not be downloaded. Failing build."
+            exit 1
+          fi
+
       - name: Install dependencies
         run: npm install
 
