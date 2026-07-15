@@ -6,8 +6,8 @@ import print3Asset from "@/assets/volcanic-landscape-fuerteventura-canary-island
 import print4Asset from "@/assets/the-blue-boat-that-dreams-of-sea.jpg.asset.json";
 import studio from "@/assets/studio.jpg";
 import logo from "@/assets/gak-logo.png.asset.json";
-
-const SITE_URL = "https://gak-creations-doorway.lovable.app";
+import { Link } from "@tanstack/react-router";
+import { SITE_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -88,15 +88,15 @@ function Header() {
   return (
     <header className="border-b border-ink/15">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12">
-        <a href="/" className="eyebrow">
+        <Link to="/" className="eyebrow">
           Est. Studio
-        </a>
-        <a href="/" className="flex items-center gap-3">
+        </Link>
+        <Link to="/" className="flex items-center gap-3">
           <img src={logo.url} alt="GAK Creations" className="h-9 w-auto md:h-10" />
           <span className="font-display text-xl tracking-wide md:text-2xl">
             GAK <span className="italic font-light">Creations</span>
           </span>
-        </a>
+        </Link>
         <a
           href={SHOP_URL}
           target="_blank"
@@ -105,12 +105,7 @@ function Header() {
         >
           Shop →
         </a>
-        <a
-          href={SHOP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="eyebrow md:hidden"
-        >
+        <a href={SHOP_URL} target="_blank" rel="noopener noreferrer" className="eyebrow md:hidden">
           Shop
         </a>
       </div>
@@ -132,9 +127,8 @@ function Hero() {
             <span className="italic font-light">of</span> places.
           </h1>
           <p className="mt-8 max-w-md text-base leading-relaxed text-ink-soft md:text-lg">
-            Architectural drawings and travel collages from a lifetime of
-            wandering — Europe, the Atlantic islands, and the small structures
-            in between. Now available as fine art prints.
+            Architectural drawings and travel collages from a lifetime of wandering — Europe, the
+            Atlantic islands, and the small structures in between. Now available as fine art prints.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-6">
             <a
@@ -189,10 +183,7 @@ function Marquee() {
     <div className="overflow-hidden border-b border-ink/15 bg-paper-warm">
       <div className="flex whitespace-nowrap py-5 [animation:marquee_40s_linear_infinite]">
         {[...items, ...items, ...items].map((t, i) => (
-          <span
-            key={i}
-            className="mx-10 font-display text-2xl italic text-ink md:text-3xl"
-          >
+          <span key={i} className="mx-10 font-display text-2xl italic text-ink md:text-3xl">
             {t} <span className="mx-8 text-ink/40">✦</span>
           </span>
         ))}
@@ -217,23 +208,20 @@ function Editorial() {
         </div>
         <div className="md:col-span-8">
           <h2 className="font-display text-4xl leading-[1.05] md:text-6xl">
-            The discipline of an architect. The eye of a{" "}
-            <em className="font-light">traveler.</em>
+            The discipline of an architect. The eye of a <em className="font-light">traveler.</em>
           </h2>
           <div className="mt-10 grid gap-8 text-base leading-relaxed text-ink-soft md:grid-cols-2 md:text-[1.05rem]">
             <p>
-              Gerald Allen Knowles is an architect, artist, and traveler whose
-              work traces the quiet geometry of places across Europe and the
-              islands of the Atlantic. His drawings carry the discipline of
-              architectural observation — clean lines, measured shadows, and a
+              Gerald Allen Knowles is an architect, artist, and traveler whose work traces the quiet
+              geometry of places across Europe and the islands of the Atlantic. His drawings carry
+              the discipline of architectural observation — clean lines, measured shadows, and a
               sensitivity to structure.
             </p>
             <p>
-              From staircases in Saintes to volcanic landscapes in the Canary
-              Islands, his sketchbooks read like field journals: immediate,
-              intimate, shaped by decades of wandering with pen and paper in
-              hand. His collages expand these impressions into compositions
-              that feel both analytical and poetic.
+              From staircases in Saintes to volcanic landscapes in the Canary Islands, his
+              sketchbooks read like field journals: immediate, intimate, shaped by decades of
+              wandering with pen and paper in hand. His collages expand these impressions into
+              compositions that feel both analytical and poetic.
             </p>
           </div>
         </div>
@@ -312,13 +300,9 @@ function Collection() {
               <div className="mt-5 flex items-baseline justify-between border-b border-ink/20 pb-4">
                 <div>
                   <p className="eyebrow">{w.no}</p>
-                  <h3 className="mt-2 font-display text-2xl md:text-3xl">
-                    {w.title}
-                  </h3>
+                  <h3 className="mt-2 font-display text-2xl md:text-3xl">{w.title}</h3>
                 </div>
-                <span className="text-xs uppercase tracking-[0.2em] text-ink-soft">
-                  {w.medium}
-                </span>
+                <span className="text-xs uppercase tracking-[0.2em] text-ink-soft">{w.medium}</span>
               </div>
             </a>
           ))}
@@ -349,8 +333,8 @@ function StudioNote() {
           <p className="eyebrow">In His Own Words</p>
           <blockquote className="mt-8 font-display text-3xl leading-tight md:text-5xl">
             <span className="text-ink/30">“</span>
-            Every place has a geometry. I've spent a lifetime walking slowly
-            enough to see it — then bringing it home on paper.
+            Every place has a geometry. I've spent a lifetime walking slowly enough to see it — then
+            bringing it home on paper.
             <span className="text-ink/30">”</span>
           </blockquote>
           <p className="mt-8 text-sm uppercase tracking-[0.25em] text-ink-soft">
@@ -374,9 +358,8 @@ function Shop() {
           <span className="italic font-light">home with you.</span>
         </h2>
         <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-ink-soft">
-          The full archive of drawings and collages is published as fine art
-          prints on our print-on-demand storefront. Made to order. Shipped
-          worldwide.
+          The full archive of drawings and collages is published as fine art prints on our
+          print-on-demand storefront. Made to order. Shipped worldwide.
         </p>
         <a
           href={SHOP_URL}
@@ -407,8 +390,8 @@ function Footer() {
             </p>
           </div>
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-paper/60">
-            The ongoing archive of Gerald Allen Knowles — architecture, art,
-            and lived experience, printed on paper.
+            The ongoing archive of Gerald Allen Knowles — architecture, art, and lived experience,
+            printed on paper.
           </p>
           <p className="mt-6 text-sm text-paper/70">
             <a href="mailto:info@gakcreations.com" className="hover:text-paper">
@@ -417,9 +400,7 @@ function Footer() {
           </p>
         </div>
         <div className="md:col-span-3">
-          <p className="text-[0.65rem] uppercase tracking-[0.28em] text-paper/50">
-            Elsewhere
-          </p>
+          <p className="text-[0.65rem] uppercase tracking-[0.28em] text-paper/50">Elsewhere</p>
           <ul className="mt-5 space-y-3 text-sm">
             <li>
               <a
@@ -432,10 +413,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a
-                href="https://www.gakcreations.com"
-                className="hover:text-paper/70"
-              >
+              <a href="https://www.gakcreations.com" className="hover:text-paper/70">
                 gakcreations.com
               </a>
             </li>
@@ -447,24 +425,24 @@ function Footer() {
           </p>
           <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
             <li>
-              <a href="/shipping-policy" className="hover:text-paper/70">
+              <Link to="/shipping-policy" className="hover:text-paper/70">
                 Shipping Policy
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/refund-policy" className="hover:text-paper/70">
+              <Link to="/refund-policy" className="hover:text-paper/70">
                 Refund & Returns
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/terms" className="hover:text-paper/70">
+              <Link to="/terms" className="hover:text-paper/70">
                 Terms of Service
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/privacy-policy" className="hover:text-paper/70">
+              <Link to="/privacy-policy" className="hover:text-paper/70">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
           </ul>
           <p className="mt-6 text-xs leading-relaxed text-paper/50">
