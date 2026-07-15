@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroArtwork from "@/assets/abbaye-aux-dames-saintes.jpg.asset.json";
-import casaBatlloAsset from "@/assets/casa-batllo-gaudi-barcelona.jpg.asset.json";
-import print2Asset from "@/assets/church-of-san-juan-bautista-de-banos-spain.jpg.asset.json";
-import print3Asset from "@/assets/volcanic-landscape-fuerteventura-canary-islands.jpg.asset.json";
-import print4Asset from "@/assets/the-blue-boat-that-dreams-of-sea.jpg.asset.json";
 import studio from "@/assets/studio.jpg";
-import logo from "@/assets/gak-logo.png.asset.json";
+
+const heroArtworkUrl = "/images/abbaye-aux-dames-saintes.jpg";
+const casaBatlloUrl = "/images/casa-batllo-gaudi-barcelona.jpg";
+const print2Url = "/images/church-of-san-juan-bautista-de-banos-spain.jpg";
+const print3Url = "/images/volcanic-landscape-fuerteventura-canary-islands.jpg";
+const print4Url = "/images/the-blue-boat-that-dreams-of-sea.jpg";
+const logoUrl = "/images/gak-logo.png";
 
 const SITE_URL = "https://www.gakcreations.com";
 
@@ -52,7 +53,7 @@ export const Route = createFileRoute("/")({
               email: "info@gakcreations.com",
               logo: {
                 "@type": "ImageObject",
-                url: `${SITE_URL}${logo.url}`,
+                url: `${SITE_URL}${logoUrl}`,
               },
               founder: {
                 "@type": "Person",
@@ -92,7 +93,7 @@ function Header() {
           Est. Studio
         </a>
         <a href="/" className="flex items-center gap-3">
-          <img src={logo.url} alt="GAK Creations" className="h-9 w-auto md:h-10" />
+          <img src={logoUrl} alt="GAK Creations" className="h-9 w-auto md:h-10" />
           <span className="font-display text-xl tracking-wide md:text-2xl">
             GAK <span className="italic font-light">Creations</span>
           </span>
@@ -153,7 +154,7 @@ function Hero() {
           <div className="absolute -left-4 top-0 hidden h-full w-px bg-ink/20 md:block" />
           <figure className="relative">
             <img
-              src={heroArtwork.url}
+              src={heroArtworkUrl}
               alt="Architectural study of Abbaye Aux Dames, Saintes, France, by Gerald Allen Knowles"
               width={1400}
               height={1600}
@@ -233,25 +234,25 @@ function Editorial() {
 function Collection() {
   const works = [
     {
-      img: casaBatlloAsset.url,
+      img: casaBatlloUrl,
       no: "N° 02",
       title: "Guggenheim Museum Bilbao, Spain",
       medium: "Collage · Bilbao",
     },
     {
-      img: print2Asset.url,
+      img: print2Url,
       no: "N° 03",
       title: "Church of San Juan Bautista de Baños Spain",
       medium: "Collage · Spain",
     },
     {
-      img: print3Asset.url,
+      img: print3Url,
       no: "N° 04",
       title: "Volcanic Landscape of Fuerteventura",
       medium: "Ink & wash · Canary Islands",
     },
     {
-      img: print4Asset.url,
+      img: print4Url,
       no: "N° 05",
       title: "The Blue Boat That Dreams of Sea",
       medium: "Ink & wash · Mediterranean",
@@ -384,7 +385,7 @@ function Footer() {
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 py-16 md:grid-cols-12 md:px-12">
         <div className="md:col-span-5">
           <div className="flex items-center gap-4">
-            <img src={logo.url} alt="GAK Creations" className="h-12 w-auto invert" />
+            <img src={logoUrl} alt="GAK Creations" className="h-12 w-auto invert" />
             <p className="font-display text-4xl md:text-5xl">
               GAK <em className="font-light">Creations</em>
             </p>

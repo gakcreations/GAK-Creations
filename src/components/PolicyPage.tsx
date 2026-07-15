@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/gak-logo.png.asset.json";
 
 interface PolicyPageProps {
   eyebrow: string;
@@ -18,7 +17,7 @@ export function PolicyPage({ eyebrow, title, updated, children }: PolicyPageProp
             ← Back to Studio
           </Link>
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo.url} alt="GAK Creations" className="h-8 w-auto" />
+            <img src="/images/gak-logo.png" alt="GAK Creations" className="h-8 w-auto" />
             <span className="font-display text-xl tracking-wide md:text-2xl">
               GAK <span className="italic font-light">Creations</span>
             </span>
