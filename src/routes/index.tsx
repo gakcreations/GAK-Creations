@@ -1,18 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import studio from "@/assets/studio.jpg";
-import heroAsset from "@/assets/abbaye-aux-dames-saintes.jpg.asset.json";
-import casaBatlloAsset from "@/assets/casa-batllo-gaudi-barcelona.jpg.asset.json";
-import print2Asset from "@/assets/church-of-san-juan-bautista-de-banos-spain.jpg.asset.json";
-import print3Asset from "@/assets/volcanic-landscape-fuerteventura-canary-islands.jpg.asset.json";
-import print4Asset from "@/assets/the-blue-boat-that-dreams-of-sea.jpg.asset.json";
-import logoAsset from "@/assets/gak-logo.png.asset.json";
-
-const heroArtworkUrl = heroAsset.url;
-const casaBatlloUrl = casaBatlloAsset.url;
-const print2Url = print2Asset.url;
-const print3Url = print3Asset.url;
-const print4Url = print4Asset.url;
-const logoUrl = logoAsset.url;
+import heroArtworkUrl from "@/assets/abbaye-aux-dames-saintes.jpg";
+import casaBatlloUrl from "@/assets/casa-batllo-gaudi-barcelona.jpg";
+import print2Url from "@/assets/church-of-san-juan-bautista-de-banos-spain.jpg";
+import print3Url from "@/assets/volcanic-landscape-fuerteventura-canary-islands.jpg";
+import print4Url from "@/assets/the-blue-boat-that-dreams-of-sea.jpg";
+import logoUrl from "@/assets/gak-logo.png";
 
 const SITE_URL = "https://www.gakcreations.com";
 const SHOP_URL = "https://gak-creations.printify.me";
