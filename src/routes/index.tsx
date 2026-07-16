@@ -415,4 +415,14 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href
+            <li>
+  <a
+    href={SHOP_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-paper/70"
+  >
+    Printify Storefront
+  </a>
+</li>
+ 
