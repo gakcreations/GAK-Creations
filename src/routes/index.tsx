@@ -1,14 +1,5 @@
 import { Link } from "@tanstack/react-router";
 
-// Image URLs served from public/images
-const studio = "/images/Fuerteventura Chapel.jpg";
-const heroArtworkUrl = "/images/Abbaye Aux Dames Saintes France.jpg";
-const casaBatlloUrl = "/images/Guggenheim Museum Bilba, Spain.jpg";
-const print2Url = "/images/Chruch of San Juan Bautista de Banos, Spain.jpg";
-const print3Url = "/images/Fuerteventura Chapel.jpg";
-const print4Url = "/images/The Boat That Dreams Of Sea.jpg";
-const logoUrl = "/images/Logo GAK Creations copy.png";
-
 export default function Index() {
   return (
     <div className="min-h-screen bg-paper text-paper">
@@ -16,7 +7,7 @@ export default function Index() {
       <header className="border-b border-paper/15">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-12">
           <img
-            src={logoUrl}
+            src="/images/Logo GAK Creations copy.png"
             alt="GAK Creations Logo"
             className="h-10 w-auto"
           />
@@ -54,7 +45,7 @@ export default function Index() {
           </div>
           <div>
             <img
-              src={heroArtworkUrl}
+              src="/images/Abbaye Aux Dames Saintes France.jpg"
               alt="Hero Artwork"
               className="w-full rounded-lg shadow-lg"
             />
@@ -72,7 +63,7 @@ export default function Index() {
           {/* Print 1 */}
           <div>
             <img
-              src={casaBatlloUrl}
+              src="/images/Guggenheim Museum Bilba, Spain.jpg"
               alt="Guggenheim Museum Bilbao"
               className="w-full rounded-lg shadow-md"
             />
@@ -84,7 +75,7 @@ export default function Index() {
           {/* Print 2 */}
           <div>
             <img
-              src={print2Url}
+              src="/images/Church of San Juan Bautista de Ban.jpg"
               alt="Church of San Juan Bautista de Banos"
               className="w-full rounded-lg shadow-md"
             />
@@ -96,7 +87,7 @@ export default function Index() {
           {/* Print 3 */}
           <div>
             <img
-              src={print3Url}
+              src="/images/Fuerteventura Chapel.jpg"
               alt="Fuerteventura Chapel"
               className="w-full rounded-lg shadow-md"
             />
@@ -108,7 +99,7 @@ export default function Index() {
           {/* Print 4 */}
           <div>
             <img
-              src={print4Url}
+              src="/images/The Boat That Dreams Of Sea.jpg"
               alt="The Boat That Dreams Of Sea"
               className="w-full rounded-lg shadow-md"
             />
@@ -124,7 +115,7 @@ export default function Index() {
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
           <div>
             <img
-              src={studio}
+              src="/images/Fuerteventura Chapel.jpg"
               alt="Studio"
               className="w-full rounded-lg shadow-lg"
             />
