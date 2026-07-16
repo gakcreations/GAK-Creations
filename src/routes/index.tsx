@@ -1,13 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import studio from "@/assets/studio.jpg";
+import heroAsset from "@/assets/abbaye-aux-dames-saintes.jpg.asset.json";
+import casaBatlloAsset from "@/assets/casa-batllo-gaudi-barcelona.jpg.asset.json";
+import print2Asset from "@/assets/church-of-san-juan-bautista-de-banos-spain.jpg.asset.json";
+import print3Asset from "@/assets/volcanic-landscape-fuerteventura-canary-islands.jpg.asset.json";
+import print4Asset from "@/assets/the-blue-boat-that-dreams-of-sea.jpg.asset.json";
+import logoAsset from "@/assets/gak-logo.png.asset.json";
 
-// FIXED IMAGE PATHS — GitHub Pages requires relative paths
-const heroArtworkUrl = "./images/abbaye-aux-dames-saintes.jpg";
-const casaBatlloUrl = "./images/casa-batllo-gaudi-barcelona.jpg";
-const print2Url = "./images/church-of-san-juan-bautista-de-banos-spain.jpg";
-const print3Url = "./images/volcanic-landscape-fuerteventura-canary-islands.jpg";
-const print4Url = "./images/the-blue-boat-that-dreams-of-sea.jpg";
-const logoUrl = "./images/gak-logo.png";
+const heroArtworkUrl = heroAsset.url;
+const casaBatlloUrl = casaBatlloAsset.url;
+const print2Url = print2Asset.url;
+const print3Url = print3Asset.url;
+const print4Url = print4Asset.url;
+const logoUrl = logoAsset.url;
 
 const SITE_URL = "https://www.gakcreations.com";
 const SHOP_URL = "https://gak-creations.printify.me";
