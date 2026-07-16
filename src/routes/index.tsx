@@ -10,6 +10,7 @@ const print4Url = "./images/the-blue-boat-that-dreams-of-sea.jpg";
 const logoUrl = "./images/gak-logo.png";
 
 const SITE_URL = "https://www.gakcreations.com";
+const SHOP_URL = "https://gak-creations.printify.me";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -68,8 +69,6 @@ export const Route = createFileRoute("/")({
     ],
   }),
 });
-
-const SHOP_URL = "https://gak-creations.printify.me";
 
 function Index() {
   return (
@@ -401,6 +400,7 @@ function Footer() {
             </a>
           </p>
         </div>
+
         <div className="md:col-span-3">
           <p className="text-[0.65rem] uppercase tracking-[0.28em] text-paper/50">Elsewhere</p>
           <ul className="mt-5 space-y-3 text-sm">
@@ -413,16 +413,3 @@ function Footer() {
               >
                 Printify Storefront
               </a>
-            </li>
-            <li>
-            <li>
-  <a
-    href={SHOP_URL}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-paper/70"
-  >
-    Printify Storefront
-  </a>
-</li>
- 
