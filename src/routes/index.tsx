@@ -3,6 +3,15 @@ import { createFileRoute } from "@tanstack/react-router";
 const SITE_URL = "https://www.gakcreations.com";
 const SHOP_URL = "https://gak-creations.printify.me";
 
+// Image URLs served from public/images
+const studio = "/images/Fuerteventura Chapel.jpg";
+const heroArtworkUrl = "/images/Abbaye Aux Dames Saintes France.jpg";
+const casaBatlloUrl = "/images/Guggenheim Museum Bilba, Spain.jpg";
+const print2Url = "/images/Church of San Juan Bautista de Ban.jpg";
+const print3Url = "/images/Fuerteventura Chapel.jpg";
+const print4Url = "/images/The Boat That Dreams Of Sea.jpg";
+const logoUrl = "/images/Logo GAK Creations copy.png";
+
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
@@ -46,7 +55,7 @@ export const Route = createFileRoute("/")({
               email: "info@gakcreations.com",
               logo: {
                 "@type": "ImageObject",
-                url: `${SITE_URL}/images/Logo GAK Creations copy.png`,
+                url: `${SITE_URL}${logoUrl}`,
               },
               founder: {
                 "@type": "Person",
@@ -84,7 +93,7 @@ function Header() {
           Est. Studio
         </a>
         <a href="/" className="flex items-center gap-3">
-          <img src="/images/Logo GAK Creations copy.png" alt="GAK Creations" className="h-9 w-auto md:h-10" />
+          <img src={logoUrl} alt="GAK Creations" className="h-9 w-auto md:h-10" />
           <span className="font-display text-xl tracking-wide md:text-2xl">
             GAK <span className="italic font-light">Creations</span>
           </span>
@@ -145,7 +154,7 @@ function Hero() {
           <div className="absolute -left-4 top-0 hidden h-full w-px bg-ink/20 md:block" />
           <figure className="relative">
             <img
-              src="/images/Abbaye Aux Dames Saintes France.jpg"
+              src={heroArtworkUrl}
               alt="Architectural study of Abbaye Aux Dames, Saintes, France, by Gerald Allen Knowles"
               width={1400}
               height={1600}
@@ -225,25 +234,25 @@ function Editorial() {
 function Collection() {
   const works = [
     {
-      img: "/images/Guggenheim Museum Bilba, Spain.jpg",
+      img: casaBatlloUrl,
       no: "N° 02",
       title: "Guggenheim Museum Bilbao, Spain",
       medium: "Collage · Bilbao",
     },
     {
-      img: "/images/Church of San Juan Bautista de Ban.jpg",
+      img: print2Url,
       no: "N° 03",
       title: "Church of San Juan Bautista de Baños Spain",
       medium: "Collage · Spain",
     },
     {
-      img: "/images/Fuerteventura Chapel.jpg",
+      img: print3Url,
       no: "N° 04",
       title: "Volcanic Landscape of Fuerteventura",
       medium: "Ink & wash · Canary Islands",
     },
     {
-      img: "/images/The Boat That Dreams Of Sea.jpg",
+      img: print4Url,
       no: "N° 05",
       title: "The Blue Boat That Dreams of Sea",
       medium: "Ink & wash · Mediterranean",
@@ -310,7 +319,7 @@ function StudioNote() {
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 py-20 md:grid-cols-12 md:px-12 md:py-28">
         <figure className="md:col-span-6">
           <img
-            src="/images/Fuerteventura Chapel.jpg"
+            src={studio}
             alt="Inside the GAK Creations studio"
             width={1200}
             height={900}
@@ -376,7 +385,7 @@ function Footer() {
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 py-16 md:grid-cols-12 md:px-12">
         <div className="md:col-span-5">
           <div className="flex items-center gap-4">
-            <img src="/images/Logo GAK Creations copy.png" alt="GAK Creations" className="h-12 w-auto invert" />
+            <img src={logoUrl} alt="GAK Creations" className="h-12 w-auto invert" />
             <p className="font-display text-4xl md:text-5xl">
               GAK <em className="font-light">Creations</em>
             </p>
@@ -414,4 +423,42 @@ function Footer() {
         </div>
 
         <div className="md:col-span-4">
-          <p className="text-[0.65rem] uppercase tracking-[
+          <p className="text-[0.65rem] uppercase tracking-[0.28em] text-paper/50">
+            Customer Care & Legal
+          </p>
+          <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
+            <li>
+              <a href="/shipping-policy" className="hover:text-paper/70">
+                Shipping Policy
+              </a>
+            </li>
+            <li>
+              <a href="/refund-policy" className="hover:text-paper/70">
+                Refund & Returns
+              </a>
+            </li>
+            <li>
+              <a href="/terms" className="hover:text-paper/70">
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a href="/privacy-policy" className="hover:text-paper/70">
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+          <p className="mt-6 text-xs leading-relaxed text-paper/50">
+            Made to order. Fulfilled worldwide through Printify.
+          </p>
+        </div>
+      </div>
+      <div className="border-t border-paper/15">
+        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-4 px-6 py-6 text-[0.7rem] uppercase tracking-[0.25em] text-paper/50 md:px-12">
+          <span>© {new Date().getFullYear()} GAK Creations</span>
+          <span>Made with care — in the studio</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
