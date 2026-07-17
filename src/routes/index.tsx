@@ -1,6 +1,10 @@
-import { Link } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 
-export default function Index() {
+export const Route = createFileRoute("/")({
+  component: Index,
+});
+
+function Index() {
   return (
     <div className="min-h-screen bg-paper text-paper">
       {/* Header */}
