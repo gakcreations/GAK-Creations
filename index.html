@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAK Creations — Fine Art by Gerald Allen Knowles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        header {
+            background: #f8f8f8;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .button:hover {
+            background: #444;
+        }
+        
+        .featured {
+            max-width: 900px;
+            margin: 80px auto;
+            text-align: center;
+        }
+        
+        .featured img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.15);
+            margin-bottom: 30px;
+        }
+        
+        .featured h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .featured p {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .collections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin: 80px auto;
+            max-width: 1200px;
+        }
+        
+        .collection-card {
+            text-align: center;
+        }
+        
+        .collection-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .collection-card img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,.15);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .collection-card img:hover {
+            transform: scale(1.03);
+        }
+        
+        .collection-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background: #f8f8f8;
+            padding: 40px 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #eee;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>GAK Creations</h1>
+            <p style="text-align: center; color: #777; font-size: 0.95rem;">Fine Art by Gerald Allen Knowles</p>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <p style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; color: #999; margin-bottom: 40px;">
+                Original Artwork • Museum-Quality Fine Art Prints • Worldwide Delivery
+            </p>
+            
+            <h1 style="margin-bottom: 20px;">Art Inspired by Place, Light & Memory</h1>
+            
+            <p style="font-size: 1.2rem; margin-bottom: 40px; line-height: 1.8;">
+                Discover architectural sketches, coastal landscapes and travel-inspired compositions, each created from original artwork and available as museum-quality fine art prints.
+            </p>
+            
+            <a href="https://gak-creations.printify.me" class="button" target="_blank" rel="noopener">
+                Explore the Print Collection
+            </a>
+        </div>
+    </div>
+
+    <div class="featured">
+        <div class="container">
+            <h2>Featured Artwork</h2>
+            <p style="margin: 40px 0; color: #999;">Architectural sketches and travel-inspired fine art</p>
+            <p style="color: #666; font-size: 0.95rem; max-width: 600px; margin: 0 auto;">
+                A measured interpretation of historic architecture, exploring proportion and light through expressive linework.
+            </p>
+        </div>
+    </div>
+
+    <div class="collections">
+        <div class="collection-card">
+            <a href="#architecture">
+                <div style="background: #f0f0f0; height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
+                    Architecture Collection
+                </div>
+                <h3>Architecture</h3>
+            </a>
+        </div>
+        
+        <div class="collection-card">
+            <a href="#coastal">
+                <div style="background: #e8f4f8; height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
+                    Coastal Collection
+                </div>
+                <h3>Coastal</h3>
+            </a>
+        </div>
+        
+        <div class="collection-card">
+            <a href="#travel">
+                <div style="background: #f8f0e8; height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
+                    Travel & Nature Collection
+                </div>
+                <h3>Travel & Nature</h3>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GAK Creations — Art & Architecture</p>
+            <p style="margin-top: 20px; font-size: 0.9rem;">
+                <a href="#" style="color: #666; text-decoration: none;">Privacy Policy</a> • 
+                <a href="#" style="color: #666; text-decoration: none;">About</a> • 
+                <a href="#" style="color: #666; text-decoration: none;">Contact</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+<!-- force deploy refresh 2026-07-14 -->
