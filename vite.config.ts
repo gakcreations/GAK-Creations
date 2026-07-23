@@ -12,4 +12,7 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Skip Nitro for GitHub Pages — we only need the client-side SPA bundle.
+  // Inside a Lovable build this is ignored; Lovable always forces Cloudflare.
+  nitro: false,
 });
