@@ -1,5 +1,8 @@
 import type { ReactNode } from "react";
-import logo from "@/assets/gak-logo.png.asset.json";
+
+// Use the logo from the public directory so it works on GitHub Pages as well
+// as on Lovable's platform.
+const LOGO_SRC = "/images/Logo GAK Creations copy.png";
 
 interface PolicyPageProps {
   eyebrow: string;
@@ -17,7 +20,7 @@ export function PolicyPage({ eyebrow, title, updated, children }: PolicyPageProp
             ← Back to Studio
           </a>
           <a href="/" className="flex items-center gap-3">
-            <img src={logo.url} alt="GAK Creations" className="h-8 w-auto" />
+            <img src={LOGO_SRC} alt="GAK Creations" className="h-8 w-auto" />
             <span className="font-display text-xl tracking-wide md:text-2xl">
               GAK <span className="italic font-light">Creations</span>
             </span>

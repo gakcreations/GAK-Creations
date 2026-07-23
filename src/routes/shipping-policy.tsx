@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PolicyPage, PolicyH2 } from "@/components/PolicyPage";
 
-const URL = "https://gak-creations-doorway.lovable.app/shipping-policy";
+const URL = "https://gakcreations.com/shipping-policy";
 
 export const Route = createFileRoute("/shipping-policy")({
   component: ShippingPolicy,

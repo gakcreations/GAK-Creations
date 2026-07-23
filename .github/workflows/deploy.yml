@@ -20,10 +20,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
@@ -34,16 +34,21 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Pre-render pages
+        run: node scripts/prerender.mjs
+
       - name: Verify build output
         run: |
-          ls -la
-          test -d dist || (echo "dist folder not found after build" && exit 1)
-          ls -la dist
+          echo "--- dist/client contents ---"
+          ls -la dist/client/
+          test -f dist/client/index.html || (echo "ERROR: dist/client/index.html not found after pre-render" && exit 1)
+          echo "--- pre-rendered HTML files ---"
+          find dist/client -name "*.html" | sort
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./dist/client
 
   deploy:
     needs: build
