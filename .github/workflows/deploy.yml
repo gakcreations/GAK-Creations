@@ -1,4 +1,4 @@
-name: Deploy Vite site to GitHub Pages
+name: Deploy site to Cloudflare Workers
 
 on:
   push:
@@ -7,15 +7,13 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: cloudflare
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -34,25 +32,15 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Verify build output
+      - name: Verify Cloudflare build output
         run: |
-          ls -la
-          test -d dist || (echo "dist folder not found after build" && exit 1)
-          ls -la dist
+          test -f .output/server/index.mjs || (echo "worker entry point not generated" && exit 1)
+          test -f .output/server/wrangler.json || (echo "wrangler config not generated" && exit 1)
+          test -d .output/public || (echo "public assets not generated" && exit 1)
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+      - name: Deploy to Cloudflare
+        uses: cloudflare/wrangler-action@v3
         with:
-          path: ./dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy --config .output/server/wrangler.json
