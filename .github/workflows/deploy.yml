@@ -34,16 +34,19 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Generate SPA entry point
+        run: node scripts/generate-index-html.mjs
+
       - name: Verify build output
         run: |
-          ls -la
-          test -d dist || (echo "dist folder not found after build" && exit 1)
-          ls -la dist
+          test -d .output/public || (echo ".output/public not found after build" && exit 1)
+          test -f .output/public/index.html || (echo "index.html not generated" && exit 1)
+          ls -la .output/public
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist
+          path: .output/public
 
   deploy:
     needs: build
